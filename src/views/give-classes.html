@@ -37,7 +37,7 @@
             </header>  
 
             <main>
-              <form action="" id="create-classes">
+              <form action="/give-classes" id="create-classes">
 
               <fieldset> <!-- Agrupamento de dados em um formulário-->
 
@@ -45,7 +45,7 @@
 
                 <div class="input-block">
                   <label for="name">Nome Completo</label>
-                  <input type="name" id="name" required>
+                  <input type="name" id="name" name="name" required>
                 </div>
 
                 <div class="input-block">
@@ -53,7 +53,7 @@
                     <small>(Comece com https://)</small>
                   </label>
 
-                  <input type="avatar" id="avatar" type="url" required>
+                  <input type="avatar" id="avatar" name="avatar" type="url" required>
 
                 </div>
 
@@ -63,7 +63,7 @@
                     <small>(Somente números)</small>
                   </label>
 
-                  <input type="whatsapp" id="whatsapp" type="number" required>
+                  <input type="whatsapp" id="whatsapp" name="whatsapp" type="number" required>
 
                 </div>
 
@@ -83,7 +83,7 @@
                       <option value="">Selecione uma opção</option>
                       
                         {%for subject in subjects %}
-                          <option value="{{loop.index }}">
+                          <option value="{{loop.index}}">
                               {{subject}}
                           </option>
                         {%endfor%}
